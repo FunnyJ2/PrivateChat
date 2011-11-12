@@ -19,7 +19,7 @@ public class PrivateChat extends JavaPlugin {
     	}
 	
 	public void logInfo(String message) {
-    		log.info("[PrivateChat] " + message);
+    		this.getServer().getLogger().info("[PrivateChat] " + message);
     	}
 	
 	public void adminChatMsg(String message, String playername) {
@@ -30,23 +30,14 @@ public class PrivateChat extends JavaPlugin {
         	}
         	this.logInfo(playername + ": " + message); // Should only be sent once
     	}
-	
-	Logger log;
-	
-	@Override
+
 	public void onDisable() {
 		this.logInfo("Disabled");
 	}
 
-	@Override
 	public void onEnable() {
-		this.log = getServer().getLogger();
-		
 		this.getCommand("chat").setExecutor(new ChatCommand(this));
 		
 		this.logInfo(this.getDescription().getVersion() + " enabled");
 	}
-	
-	
-
 }
