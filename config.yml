@@ -1,0 +1,8 @@
+#PrivateChat configuration file
+#author: I_am_not_funny
+#for new releases, support and documentation go to http://dev.bukkit.org/server-mods/privatechat/
+#
+#lines that starts with '#' are ignored by bukkit
+#
+#
+format: '*gold[Private]*white<*purple*name*white> *message'

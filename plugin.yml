@@ -1,10 +1,11 @@
 name: PrivateChat
 author: I_am_not_funny
-version: 1.1
+version: 1.2
 main: tk.funnytopia.funny.PrivateChat
 description: Private chat between ops
 commands:
     chat:
         description: sends message to all online ops
         usage: /chat <message>
+        aliases: ['a']
         

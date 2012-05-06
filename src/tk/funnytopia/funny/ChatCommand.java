@@ -38,15 +38,13 @@ private PrivateChat plugin;
 			//console
 			if(args.length < 1) {
 				//too few args
-				plugin.logInfo("Too few arguments! /chat <message>");
+				plugin.log.info("Too few arguments! /" + commandLabel + " <message>");
 			} else {
 				//console - enough args
 				final String message = plugin.combineSplit(0, args, " ");
 				plugin.adminChatMsg(message, "*CONSOLE*");
 			}
 		}
-		
-		
 		return true;
 	}
 
